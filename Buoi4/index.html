@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    margin:40px auto;
+    width:500px;
+    position:relative;
+    overflow:hidden;
+}
+
+.anh{
+    width:500px;
+    height:500px;
+    object-fit:cover;
+    display:block;
+}
+
+.img-title{
+    position:absolute;
+    left:50%;
+    bottom:40px;
+    transform:translateX(-50%);
+    color:blue;
+    font-size:48px;
+    font-weight:700;
+    transition: all 0.5s ease;
+}
+.container:hover .img-title{
+    bottom:220px;         
+    color:white;          
+}
+
+.img-description{
+    width: 100%;
+    position: absolute;
+    font-size: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 300;
+    text-align: center;
+    bottom: 0;
+    opacity: 0;
+}
+
+.container:hover .img-description{
+    bottom:40px;
+    color: white;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+.bg{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top:0;
+    background: linear-gradient(45deg, #053ae9, #e805e8);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.container:hover .bg{
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img 
+    src="https://media2.gody.vn/public/mytravelmap/images/2018/6/1/nguyentoan01/c5436476b763488be64dac7cfd0ce513d0b1ef2e.jpg" 
+    alt=""
+    class="anh">
+    <h1 class="img-title">HOLYSADIE</h1>
+    <span class="img-description">SADIE NEVER TOOK HER EYES OFF ME.<br>SHE HAD A DARK SOUL.</span>
+    <div  class="bg"></div>
+</div>
+
+</body>
+</html>

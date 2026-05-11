@@ -1,0 +1,104 @@
+body{
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: 400;
+    color:white;
+    font-family: 'Inter', sans-serif;
+}
+.container{
+    position: relative;
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    margin: 40px auto;
+}   
+.img-bg{
+    width: 100%;
+    height: 500px;
+    object-fit:cover;
+    display:block;
+}
+.title{
+    display: flex;
+    gap : 10px;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.title .tender {
+    font-size: 48px;
+    font-weight:lighter;
+  
+}
+.title .hera {
+    font-size: 48px;
+    font-weight:bolder;
+}
+ul{
+    list-style: none;
+}
+.container li{
+    position:absolute;
+    top:var(--top);
+    left:var(--left);
+    transform:translate(-50%, -50%);
+    opacity:0;
+    transition:all .5s ease;
+}
+.container:hover li{
+    opacity:1;
+}
+.container:hover .top_left{
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container:hover .bot_left{
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.container:hover .top_right{
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+.container:hover .bot_right{
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+.container:hover .title{
+    opacity:0;
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+        transition: all .5s ease;
+}
+.container_icon{
+    display:flex;
+    border:2px solid #fff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:50%;
+    height:50%;
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg)
+        scale(0);
+    opacity:0;
+    transition:
+        transform .5s ease,
+        opacity .5s ease;
+}
+.container:hover .container_icon{
+    opacity:1;
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg)
+        scale(1);
+}
