@@ -5,7 +5,7 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     font-weight: 400;
-        line-height: 1.5;
+    line-height: 1.5;
 }
 
 header {
@@ -63,9 +63,8 @@ header.sticky {
     color: #000;
     font-size: 18px;
     text-decoration: none;
-
 }
-.dsg span {
+.dsg .logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,6 +354,14 @@ padding-bottom: 97px;
     display: block;
     margin-top: 20px;
   }
+  .dsg .name{
+       clip-path: inset(0 0 0 0);
+    opacity: 1;
+    transition: all 0.9s ease;
+    transform: translateX(0);
+  }
+
+
 @media screen and (max-width: 768px) {
     .header-container {
         max-width: 540px;
@@ -448,5 +455,12 @@ padding-bottom: 97px;
   }
   .footer-container {
     max-width: 540px;
+}
+.dsg .name{
+    clip-path: inset(0 0 0 100%);
+    opacity: 0;
+    transition: all 0.9s ease;
+    transform: translateX(-100%);
+    transform-origin: left;
 }
 }
