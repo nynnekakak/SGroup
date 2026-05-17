@@ -220,9 +220,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, 
         window.addEventListener('scroll', function() {
             const scroll = window.scrollY;
             if (scroll > 50) {
-                document.querySelector('header').classList.add('sticky');
+                document.getElementsByTagName('header')[0].classList.add('sticky');
             } else {
-                document.querySelector('header').classList.remove('sticky');
+                document.getElementsByTagName('header')[0].classList.remove('sticky');
             }
         });
     </script>
